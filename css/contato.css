@@ -26,6 +26,23 @@
   font-size: 14px;
 }
 
+/* BUTTON */
+
+.btn-contact {
+  cursor: pointer;
+  border: none;
+  padding: 1rem;
+  transition-duration: 300ms;
+  font-weight: 600;
+  border-radius: 0 0 0.5rem 0.5rem;
+  color: #d3d3d3;
+}
+
+.btn-contact:hover {
+  background-color: #2a6a67;
+  color: #fff;
+}
+
 /* INPUTS */
 .input {
   border-radius: 5px;

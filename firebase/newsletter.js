@@ -1,6 +1,6 @@
 /* NEWSLETTER */
 let emailinput = document.getElementById("email-input");
-const mensagemInformativa = document.getElementById("mensagem");
+const mensagemInformativa = document.getElementById("mensagem-newsletter");
 
 emailinput.addEventListener("input", function () {
   const valor = emailinput.value;
