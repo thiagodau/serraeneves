@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+      <section class="dash-header">
+        <img src="../../images/small-logo.png" alt="Logomarca" />
+        <h3>Serra e Neves Advogados.</h3>
+      </section>
+      <section class="dash-logout">
+        <a href="../painel/dashboard.html">Voltar.</a>
+      </section>
+      <section class="dash-question">
+        <p>Aqui esta a lista de e-mails cadastrados.</p>
+      </section>
+      <section class="dash-lista">
+        <ul id="listaMensagens"></ul>
+      </section>
+
+
+       <!-- FIREBASE & NEWSLETTER JS -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+    <script src="../../firebase/firebaseConfig.js"></script>
+    <script>
+      buscarEmailsCadastrados()
+      /* leitura de mensagens */
+      function buscarEmailsCadastrados () {
+          firebase
+            .database()
+            .ref("newsletter/")
+            .on("value", function (snap) {
+              console.log(snap.val());
+              const dados = snap.val();
+              const arrayDeObjetos = Object.entries(dados).map(
+                ([chave, valor]) => ({
+                  chave,
+                  valor,
+                })
+              ).reverse();
+
+              const lista = document.getElementById("listaMensagens");
+              // Usando forEach para listar
+              arrayDeObjetos.forEach((item) => {
+                const listItem = document.createElement("li");
+                listItem.textContent = `ID: ${item.chave}, E-mail: ${item.valor.email}, Data: ${item.valor.date}`;
+
+                // Cria o botão
+                const botao = document.createElement("button");
+                botao.textContent = "Apagar"; // Texto do botão
+                botao.onclick = () => {
+                  if (
+                    confirm(
+                      `Você quer apagar a mensagem de ${item.valor.name}? (id: ${item.chave})`
+                    )
+                  ) {
+                    deletarMensagem(item.chave);
+                  }
+                };
+
+                // Cria de envio de email
+                const botaoEnvioEmail = document.createElement("button");
+                botaoEnvioEmail.textContent = "Enviar E-mail"; // Texto do botão
+                botaoEnvioEmail.onclick = () => {
+                  alert('enviar um email...')
+                };
+
+                // Adiciona o botão ao item da lista
+                listItem.appendChild(botaoEnvioEmail);
+                listItem.appendChild(botao);
+                lista.appendChild(listItem);
+              });
+            });
+        };
+        
+        /* apagar mensagens */
+        function deletarMensagem(_id) {
+          console.log("deletar mensagem...");
+          firebase
+            .database()
+            .ref("mensagens/" + _id)
+            .remove();
+
+          alert("Item removido.");
+          location.reload();
+        }
+
+
+    </script>
+  </section>
+  </body>
+</html>
