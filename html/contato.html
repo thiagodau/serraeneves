@@ -62,23 +62,26 @@
     <div class="container-contact">
      <section class="container-contact-info">
         <input
+          id="name"
           type="text"
           class="input"
           name="name-input"
           placeholder="Nome" />
         <input
+          id="email"
           type="email"
           class="input"
           name="email-input"
           placeholder="Seu melhor e-mail" />
         <textarea
+          id="mensagem"
           name="text-message"
           id="text-message"
           maxlength="350"
           class="input"
           placeholder="Deixe sua mensagem aqui..." ></textarea>
           
-          <button class="btn-newsletter">
+          <button id="sendMessage" class="btn-newsletter">
             ENVIAR <i class="fa-solid fa-paper-plane"></i>
           </button>
 
@@ -109,6 +112,7 @@
         <a href="" class="icons"><i class="fa-solid fa-paper-plane"></i></a>
       </section>
   </div>
+  <!-- FIM CONTATO -->
 
    <!-- FOOTER -->
    <section class="footer-container">
@@ -119,13 +123,15 @@
           Informe seu e-mail e <br />receba nossas informações
           <br />gratuitamente.
         </p>
+        <p id="mensagem"></p>
         <input
           type="email"
           name="email-input"
           id="email-input"
           placeholder="E-mail"
+          required
         />
-        <button class="btn-newsletter">
+        <button id="btn-newsletter" class="btn-newsletter">
           ENVIAR <i class="fa-solid fa-paper-plane"></i>
         </button>
       </div>
@@ -175,11 +181,14 @@
   </section>
   <!-- FIM FOOTER -->
 
-
-    <!-- JAVASCRIPT-->
-    <script src="../script.js"></script>
-    <script
-      src="https://kit.fontawesome.com/f8e1a90484.js"
-      crossorigin="anonymous"></script>
+  <!-- JAVASCRIPT-->
+  <script src="../script.js"></script>
+  <script
+    src="https://kit.fontawesome.com/f8e1a90484.js"
+    crossorigin="anonymous"></script>
+  <!-- FIREBASE JS -->
+  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+  <script src="../firebase/firebaseConfig.js"></script>
+  <script src="../firebase/crud.js"></script>
   </body>
 </html>

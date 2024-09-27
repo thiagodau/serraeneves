@@ -26,7 +26,7 @@
         <li><a href="./index.html">Ínicio</a></li>
         <li><a href="./index.html#services">Serviços</a></li>
         <li class="dropdown">
-          <a href="./admjudicial.html">Administração Judicial</a>
+          <a href="./admjudicial.html"><strong style="color: #ab9765">Administração Judicial</strong></a>
           <div class="dropdown-menu">
             <a href="./admjudicial.html">Recuperação Judicial </a>
             <div class="linha-pequena"></div>
@@ -96,13 +96,15 @@
             Informe seu e-mail e <br />receba nossas informações
             <br />gratuitamente.
           </p>
+          <p id="mensagem"></p>
           <input
             type="email"
             name="email-input"
             id="email-input"
             placeholder="E-mail"
+            required
           />
-          <button class="btn-newsletter">
+          <button id="btn-newsletter" class="btn-newsletter">
             ENVIAR <i class="fa-solid fa-paper-plane"></i>
           </button>
         </div>
@@ -156,5 +158,9 @@
       src="https://kit.fontawesome.com/f8e1a90484.js"
       crossorigin="anonymous"
     ></script>
+    <!-- FIREBASE & NEWSLETTER JS -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+    <script src="../firebase/firebaseConfig.js"></script>
+    <script src="../firebase/newsletter.js"></script>
   </body>
 </html>
