@@ -1,0 +1,105 @@
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+@media (max-width: 1000px) {
+  nav {
+    padding: 10px 70px;
+  }
+
+  .footer-info {
+    font-size: 0.8rem;
+    margin-bottom: 40px;
+  }
+
+  .footer-email button {
+    font-size: 0.8rem;
+    padding: 10px 15px;
+    width: fit-content;
+  }
+}
+
+@media (max-width: 800px) {
+  nav {
+    display: flex;
+  }
+  .footer-email input {
+    width: 200px;
+  }
+
+  .footer-email img {
+    width: 160px;
+  }
+}
+
+@media (max-width: 650px) {
+  .body-logo-text h1 {
+    font-size: 20px;
+  }
+  .body-logo-text h4 {
+    font-size: 14px;
+  }
+
+  .footer-info {
+    font-size: 0.7rem;
+  }
+  .footer-email input {
+    width: 150px;
+  }
+
+  .page-footer p {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .logo img {
+    width: 130px;
+  }
+
+  .footer-info {
+    align-items: flex-end;
+  }
+
+  .footer-email img {
+    width: 130px;
+  }
+
+  .footer-email p {
+    width: 100%;
+  }
+
+  .footer-topics {
+    display: none;
+  }
+
+  .contacts-icons .icons i {
+    font-size: 19px;
+  }
+
+  .contacts-text,
+  .place-text {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer-email {
+    width: 50%;
+  }
+
+  .footer-contacts {
+    widows: 50%;
+  }
+  .footer-email input {
+    width: 125px;
+  }
+
+  .page-footer p {
+    margin: 0 20px;
+  }
+  .contacts-icons .icons i {
+    font-size: 16px;
+  }
+}

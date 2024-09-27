@@ -1,0 +1,65 @@
+@media (max-width: 1000px) {
+  #cards-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  .card-info {
+    max-width: 200px;
+    min-height: 189px;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 650px) {
+  #cards-button a {
+    font-size: 14px;
+  }
+
+  #second-hero-section {
+    background-position: -120px;
+  }
+
+  #second-hero-section h1 {
+    font-size: 35px;
+  }
+
+  #second-hero-section a {
+    font-size: 14px;
+  }
+
+  #instagram-button a {
+    font-size: 14px;
+  }
+
+  #instagram-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 30px;
+  }
+
+  #instagram-posts img:last-of-type {
+    display: none;
+  }
+}
+
+@media (max-width: 485px) {
+  #second-hero-section {
+    background-position: -150px;
+  }
+
+  #second-hero-section h1 {
+    font-size: 28px;
+  }
+
+  @media (max-width: 454px) {
+    #instagram-posts img:nth-last-of-type(-n + 5) {
+      display: none;
+    }
+  }
+}

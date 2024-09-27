@@ -1,0 +1,61 @@
+.container-contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  padding: 3rem;
+  margin: 3rem;
+}
+
+.container-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.container-contact-data {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: .8rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ab9765;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* INPUTS */
+.input {
+  border-radius: 5px;
+  width: 400px;
+  height: 50px;
+  padding: 1.2rem;
+  border: none;
+  border-left: 4px solid #ab9765;
+  background-color: #f4f4f4;
+  font-style: italic;
+}
+
+.input:focus {
+  outline: none; /* Remove a borda ou contorno padrão ao focar */
+}
+
+.container-contact-info textarea {
+  width: 400px !important;
+  background-color: #f4f4f4 !important;
+  border-radius: 0px !important;
+  margin-bottom: -1rem !important;
+  border-left: none;
+  height: 150px;
+}
+/* FIM INPUTS */
+
+/* RESPONSIVIDADE */
+@media (max-width: 1000px) {
+  
+}
+
+@media (max-width: 500px) {
+}

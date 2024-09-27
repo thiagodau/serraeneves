@@ -1,0 +1,143 @@
+.footer-container {
+  display: flex;
+  border-top: 1px solid #dfdfdf;
+  padding: 3rem 0 3rem 0;
+}
+
+.footer-info {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10rem;
+}
+
+.footer-email {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: #c3c3c3;
+}
+
+.footer-email img {
+  width: 150px;
+  margin-bottom: 50px;
+}
+
+.footer-email input {
+  margin-top: 15px;
+  border-radius: 5px 5px 0 0;
+  width: 250px;
+  height: 35px;
+  padding: 1rem;
+  border: none;
+  background-color: #d9d9d9;
+}
+
+.footer-email input:focus {
+  outline: none; /* Remove a borda ou contorno padrão ao focar */
+  border: none; /* Se quiser remover qualquer borda personalizada */
+}
+
+.btn-newsletter {
+  cursor: pointer;
+  border: none;
+  padding: 1rem;
+  transition-duration: 300ms;
+  font-weight: 600;
+  border-radius: 0 0 0.5rem 0.5rem;
+  color: #d3d3d3;
+}
+
+.btn-newsletter:hover {
+  background-color: #2a6a67;
+  color: #fff;
+}
+
+.footer-topics,
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  font-size: 14px;
+}
+
+.info-text,
+.contacts-text {
+  font-weight: 600;
+  color: #2e2e2e;
+}
+
+.common-text {
+  text-decoration: none;
+  color: #2e2e2e;
+}
+
+.common-text:hover {
+  color: #ab9765;
+}
+
+.number-text i {
+  font-size: 20px;
+  color: rgb(41, 230, 35);
+}
+
+.contacts-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.icons {
+  font-size: 25px;
+  color: #2a6a67;
+}
+
+.page-footer {
+  background-color: #2a6a67;
+  height: 20px;
+  text-align: center;
+  place-content: center;
+  color: white;
+}
+
+.page-footer p {
+  font-size: 10px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1000px) {
+  .footer-container {
+    display: block;
+    text-align: center;
+    padding: 1rem 0 0 0;
+  }
+
+  .footer-info {
+    display: block;
+  }
+
+  .footer-email {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .footer-topics {
+    margin: 2rem 0;
+  }
+
+  .contacts-icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-email {
+    display: flex;
+    width: 100%;
+  }
+}

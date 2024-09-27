@@ -1,0 +1,373 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+/* GLOBAL COMPONENTS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", Roboto, "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  /* background: #36576e; */
+  font-size: 1rem;
+  font-weight: 400;
+  scroll-behavior: smooth;
+}
+
+/* BOTAO */
+.button {
+  background-color: #2a6a67;
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition-duration: 300ms;
+  text-align: center;
+  min-width: 350px;
+}
+
+.button:hover {
+  background-color: #ab9765;
+}
+
+/* TRILHA */
+.trilha {
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  margin: 2rem 10rem;
+}
+
+.trilha a {
+  text-decoration: none;
+  color: #2e2e2e;
+}
+
+/* CABECALHO */
+.cabecalho {
+  display: block;
+  text-align: center;
+  margin: 2rem auto;
+}
+.cabecalho h1 {
+  font-size: 1.5rem;
+  color: #2a6a67;
+}
+.cabecalho p {
+  font-style: italic;
+}
+
+/* HEADER */
+
+nav {
+  padding: 10px 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8f9fa;
+  position: relative;
+  height: 80px;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.logo {
+  color: #000;
+}
+
+nav ul {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #1e2a27;
+  font-size: 14px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  color: #ab9765;
+}
+
+/*dropdown menu*/
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #2a6a67;
+  box-shadow: 0 0 2px black;
+  border-radius: 0 0 5px 5px;
+}
+
+.dropdown-menu a {
+  font-size: 14px;
+  padding: 15px;
+  text-align: center;
+  display: block;
+  color: #fff;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.linha-pequena {
+  width: 80px; /* Largura da linha */
+  height: 1px; /* Espessura da linha */
+  background-color: #ab9765; /* Cor da linha */
+  margin: 0 auto; /* Centraliza a linha e adiciona margem */
+}
+/*fim dropdown menu*/
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-icon i {
+  color: #ab9765;
+  font-size: 30px;
+}
+
+@media (max-width: 1000px) {
+  nav ul {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    text-align: center;
+    background: #fff;
+    gap: 0;
+    overflow: hidden;
+  }
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    display: block; /* Faz o link ocupar toda a área da li */
+    padding: 10px 20px; /* Ajusta o tamanho do link */
+    text-decoration: none; /* Remove o sublinhado */
+    background-color: #f0f0f0; /* Cor de fundo da li */
+    color: #333; /* Cor do texto */
+  }
+
+  nav ul li a:hover {
+    background-color: #ab9765;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+  #menuList {
+    transition: all 0.5s;
+  }
+}
+
+@media (max-width: 500px) {
+  nav {
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fafafa;
+    position: relative;
+    height: 120px;
+  }
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    display: block; /* Faz o link ocupar toda a área da li */
+    padding: 10px 20px; /* Ajusta o tamanho do link */
+    text-decoration: none; /* Remove o sublinhado */
+    background-color: #f0f0f0; /* Cor de fundo da li */
+    color: #333; /* Cor do texto */
+  }
+
+  nav ul li a:hover {
+    background-color: #ab9765;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+  #menuList {
+    transition: all 0.5s;
+  }
+}
+
+/* BODY SECTION */
+.hero-section {
+  background-image: url("../images/fundo.jpg"); /* Caminho da imagem de fundo */
+  background-size: cover;
+  width: 100%;
+  height: calc(100vh - 120px); /* 100% da altura da tela menos o header */
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin: 120px;
+  width: 400px;
+}
+
+.content h1 {
+  font-size: 2rem;
+}
+
+.body-logo-text {
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.body-logo-text h1 {
+  color: #2a6a67;
+  font-size: 24px;
+}
+
+.body-logo-text h4 {
+  font-style: italic;
+  font-size: 16px;
+  color: #1e2a27;
+  font-weight: 400;
+}
+
+#cards-services {
+  background-color: #fff;
+  margin: 0 8rem 0 8rem;
+}
+
+#cards-group {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  text-align: center;
+}
+
+.card-info {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ab9765;
+  border-radius: 35px;
+  color: #1e2a27;
+  min-width: 150px;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px 20px;
+  padding: 30px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.card-info i {
+  color: #ab9765;
+  font-size: 50px;
+}
+
+#cards-button {
+  text-align: center;
+}
+
+#cards-button a {
+  padding: 0.8rem 5rem;
+  background-color: #ab9765;
+  border-radius: 5px;
+}
+
+#cards-button a:hover {
+  background-color: #2a6a67;
+}
+
+#second-hero-section {
+  background-image: url("../images/farmer.jpg"); /* Caminho da imagem de fundo */
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  margin-top: 75px;
+  font-size: 30px;
+}
+
+#second-hero-section a {
+  padding: 0.8rem 5rem;
+  background-color: #ab9765;
+  border-radius: 5px;
+}
+
+#second-hero-section a:hover {
+  background-color: #2a6a67;
+  padding: .8rem 7rem;
+}
+
+#instagram-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 5rem 0;
+}
+
+#instagram-name {
+  margin-top: 30px;
+  color: #1e2a27;
+  opacity: 0.9;
+}
+
+#instagram-button {
+  margin-top: 30px;
+}
+
+
+
+@media (max-width: 500px) {
+  .hero-section {
+    background-size: cover; /* Cobre toda a área */
+    background-position: 500px; /* Centraliza a imagem */
+    height: 300px; /* Ajuste conforme necessário */
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 0.3rem;
+  }
+  .hero-section {
+    text-align: center;
+  }
+  .hero-section h1 {
+    font-size: 1.2rem;
+    padding-top: 100px;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.7); /* Sombra suave */
+  }
+  .content {
+    margin: 1rem;
+  }
+}
