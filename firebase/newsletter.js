@@ -26,7 +26,12 @@ document.getElementById("btn-newsletter").onclick = function () {
         date: formatarDataHora(),
         email: emailInformado,
       });
-    alert("E-mail cadastrado, obrigado.");
+    mensagemInformativa.style.display = "block";
+    mensagemInformativa.textContent = "E-mail cadastrado, obrigado!";
+    mensagemInformativa.style.color = "green";
+    setTimeout(function () {
+      mensagemInformativa.style.display = "none";
+    }, 4000);
   } else {
     mensagemInformativa.style.display = "block";
     mensagemInformativa.textContent = "E-mail inválido!";
