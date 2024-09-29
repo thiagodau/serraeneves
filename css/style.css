@@ -178,42 +178,6 @@ nav ul li a:hover {
   }
 }
 
-@media (max-width: 500px) {
-  nav {
-    padding: 20px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #fafafa;
-    position: relative;
-    height: 120px;
-  }
-  nav ul li {
-    width: 100%;
-  }
-
-  nav ul li a {
-    display: block; /* Faz o link ocupar toda a área da li */
-    padding: 10px 20px; /* Ajusta o tamanho do link */
-    text-decoration: none; /* Remove o sublinhado */
-    background-color: #f0f0f0; /* Cor de fundo da li */
-    color: #333; /* Cor do texto */
-  }
-
-  nav ul li a:hover {
-    background-color: #ab9765;
-    color: #fff;
-    text-decoration: none;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-  #menuList {
-    transition: all 0.5s;
-  }
-}
-
 /* BODY SECTION */
 .hero-section {
   background-image: url("../images/fundo.jpg"); /* Caminho da imagem de fundo */
@@ -314,7 +278,7 @@ nav ul li a:hover {
   align-items: center;
   text-align: center;
   color: #fff;
-  margin-top: 75px;
+  margin: 4.6rem 0;
   font-size: 30px;
 }
 
@@ -348,8 +312,42 @@ nav ul li a:hover {
 }
 
 
-
+/* CELULARES */
 @media (max-width: 500px) {
+  nav {
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fafafa;
+    position: relative;
+    height: 120px;
+  }
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    display: block; /* Faz o link ocupar toda a área da li */
+    padding: 10px 20px; /* Ajusta o tamanho do link */
+    text-decoration: none; /* Remove o sublinhado */
+    background-color: #f0f0f0; /* Cor de fundo da li */
+    color: #333; /* Cor do texto */
+  }
+
+  nav ul li a:hover {
+    background-color: #ab9765;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+  #menuList {
+    transition: all 0.5s;
+  }
+
   .hero-section {
     background-size: cover; /* Cobre toda a área */
     background-position: 500px; /* Centraliza a imagem */
@@ -369,5 +367,15 @@ nav ul li a:hover {
   }
   .content {
     margin: 1rem;
+  }
+
+  /*services*/
+  #cards-services {
+    margin: 0 1rem;
+  }
+  #cards-group {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    text-align: center;
   }
 }
