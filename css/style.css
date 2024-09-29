@@ -49,6 +49,26 @@ body {
   color: #2e2e2e;
 }
 
+/* BARRA DE ROLAGEM */
+::-webkit-scrollbar {
+  width: 10px; /* Largura da barra de rolagem */
+}
+
+/* Track (fundo da barra) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Cor do fundo da barra */
+}
+
+/* Handle (a parte que se move) */
+::-webkit-scrollbar-thumb {
+  background: #2a6a67; /* Cor da parte móvel */
+}
+
+/* Handle ao passar o mouse por cima */
+::-webkit-scrollbar-thumb:hover {
+  background: #ab9765; /* Cor da parte móvel ao passar o mouse */
+}
+
 /* CABECALHO */
 .cabecalho {
   display: block;
