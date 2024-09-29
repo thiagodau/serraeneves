@@ -8,26 +8,18 @@
   gap: 30px;
 }
 
-.job-text {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 17px;
-}
-
 #job-cards-container {
   display: flex;
   width: 60%;
   justify-content: space-evenly;
   margin: 50px auto;
-  gap: 100px;
+  gap: 5rem;
 }
 
 .job-card {
   background-color: #2a6a67;
   width: 350px;
   height: 355px;
-  border-radius: 10px;
-  box-shadow: 20px 20px 56px #8d8d8d, -20px -20px 56px #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,23 +27,26 @@
 }
 
 .job-card h1 {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #ffffff;
   text-align: center;
 }
 
 #job-button {
-  font-size: 0.8rem;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.9rem;
   padding: 10px 60px;
   cursor: pointer;
+  background-color: #ab9765;
+  width: 400px;
+  text-align: center;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition-duration: 300ms;
 }
 
 #job-button:hover {
-  background-color: #ffffff;
-  color: #2a6a67;
+  background-color: #c5ac6d;
 }
 
 @media (max-width: 900px) {
@@ -72,31 +67,17 @@
   }
 }
 
-@media (max-width: 800px) {
-  .job-card {
-    width: 175px;
-    height: 180px;
-  }
-  #job-button {
-    padding: 10px 20px;
-  }
-}
-
-@media (max-width: 650px) {
-  .job-text {
-    font-size: 14px;
-  }
-  #job-cards-container {
-    margin: 30px auto;
-    justify-content: center;
-  }
-
-  .job-card {
-    min-width: 140px;
-  }
-}
-
+/* CELULARES */
 @media (max-width: 500px) {
+  /* TRILHA */
+  .trilha {
+    display: none;
+  }
+
+  #job-container {
+    width: 90%;
+  }
+
   #job-cards-container {
     flex-wrap: wrap;
     margin: 15px auto;
@@ -106,5 +87,19 @@
 
   .job-card {
     width: 200px;
+  }
+
+  #job-button {
+    font-size: 0.9rem;
+    padding: 0.5rem 60px;
+    cursor: pointer;
+    background-color: #ab9765;
+    width: 250px;
+    text-align: center;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition-duration: 300ms;
   }
 }
