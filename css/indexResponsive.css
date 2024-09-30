@@ -17,6 +17,7 @@
 @media (max-width: 650px) {
   #cards-button a {
     font-size: 14px;
+    padding: 12.8px 25px;
   }
 
   #second-hero-section {
