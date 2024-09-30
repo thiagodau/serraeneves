@@ -24,7 +24,6 @@ a {
 
 a:hover {
   background-color: #b29f70;
-
 }
 
 .dash-header {
@@ -49,6 +48,20 @@ a:hover {
   display: block;
   margin: 3rem 0 0 0;
   font-size: .7rem;
+}
+
+.dash-logout button {
+  background-color: #ab9765;
+  color: #fff;
+  padding: .6rem 1rem;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  transition-duration: 300ms;
+}
+
+.dash-logout button:hover {
+  background-color: #e04554;
 }
 
 .dash-lista {
